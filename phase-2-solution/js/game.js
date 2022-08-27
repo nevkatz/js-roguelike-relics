@@ -78,5 +78,12 @@ Game.prototype.tileCount = function(tileCode) {
    }
    return count;
 }
+Game.prototype.itemsLeft = function(tileCode) {
+   let count = 0;
+   for (var room of game.rooms) {
+    count += room.tileCount(tileCode);
+   }
+   return count;
+}
 
 
